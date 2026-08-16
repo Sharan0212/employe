@@ -1,0 +1,76 @@
+Create a production-ready Full Stack **Employee Attendance Management System** named **Indian**.
+
+TECH STACK
+- Backend: Java 17, Spring Boot, Spring Data JPA, REST APIs, Maven
+- Frontend: React + Vite, Axios, responsive CSS
+- Database: MySQL
+- Architecture: Controller -> Service -> Repository -> Entity/DTO
+- Authentication-ready architecture with role support for ADMIN, HR and EMPLOYEE
+
+CORE MODULES
+1. Employee Management
+   - Add, view, update and delete employees
+   - Fields: employee ID, name, email, phone, department, designation, joining date, status
+2. Attendance Management
+   - Check-in and check-out
+   - Mark Present, Absent, Late, Half Day and Leave
+   - Prevent duplicate attendance for the same employee/date
+   - Calculate working hours
+3. Leave Management
+   - Employee leave request
+   - HR/Admin approval or rejection
+   - Leave types: Casual, Sick, Earned and Other
+4. Dashboard
+   - Total employees
+   - Present today
+   - Absent today
+   - Late today
+   - Employees on leave
+   - Attendance percentage
+5. Reports
+   - Daily, weekly and monthly attendance
+   - Employee-wise attendance
+   - Department-wise attendance
+   - Date/month filtering
+6. Search and Filtering
+   - Search by employee ID/name
+   - Filter by department/status/date
+7. Validation and Error Handling
+   - Required fields
+   - Valid email
+   - Duplicate employee prevention
+   - Friendly API error responses
+
+DATABASE TABLES
+employees(id, employee_code, name, email, phone, department, designation, joining_date, status)
+attendance(id, employee_id, attendance_date, check_in, check_out, status, working_hours)
+leave_requests(id, employee_id, leave_type, from_date, to_date, reason, status, approved_by)
+departments(id, name)
+
+BACKEND
+- Create entities, DTOs, repositories, services and controllers.
+- Use JPA relationships.
+- Create REST APIs for employee CRUD, attendance, leave and reports.
+- Add global exception handling and validation.
+- Enable CORS for React.
+- Include sample seed data.
+- MySQL configuration must use placeholders for username/password.
+
+FRONTEND
+- Pages: Dashboard, Employees, Add Employee, Attendance, Leave Requests, Reports.
+- Components: Navbar, Sidebar, Cards, Tables, Forms, Attendance Calendar, Modal and Toast.
+- Axios API service layer.
+- Loading, empty, success and error states.
+- Professional responsive design.
+- Every application header/navbar must display exactly **Indian**.
+
+PROJECT STRUCTURE
+employee-attendance-management-system/
+  backend/
+  frontend/
+  database/
+  screenshots/
+  README.md
+  PROJECT_PROMPT.txt
+
+Provide complete setup instructions for MySQL, Spring Boot and React.
